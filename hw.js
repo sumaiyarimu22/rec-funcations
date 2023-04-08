@@ -47,3 +47,40 @@ function findFastCarOnRiver(cars, river) {
 console.log(findFastCarOnRiver(cars, river));
 
 // You have an array of shopping items, each with a "name" and "price" property. You also have a budget limit. Write a function that takes in the shopping array and budget as arguments and returns the total price of the items that fit within the budget.
+
+const shoppingItems = [
+  {
+    name: "yogurt",
+    price: 100,
+  },
+  {
+    name: "apple",
+    price: 200,
+  },
+  {
+    name: "cheese",
+    price: 500,
+  },
+  {
+    name: "Bread",
+    price: 40,
+  },
+  {
+    name: "pasta",
+    price: 200,
+  },
+];
+const budgetLimition = 100;
+
+function shoppingBudget(shoppingItems, budgetLimition) {
+  let totalPrice = 0;
+
+  for (let i = 0; i < shoppingItems.length; i++) {
+    if (shoppingItems[i].price <= budgetLimition) {
+      totalPrice += shoppingItems[i].price;
+    }
+  }
+  return totalPrice;
+}
+
+console.log(shoppingBudget(shoppingItems, budgetLimition));
