@@ -72,7 +72,7 @@ const shoppingItems = [
 ];
 const budgetLimition = 100;
 
-function shoppingBudget(shoppingItems, budgetLimition) {
+function calculatePrice(shoppingItems, budgetLimition) {
   let totalPrice = 0;
 
   for (let i = 0; i < shoppingItems.length; i++) {
@@ -83,4 +83,23 @@ function shoppingBudget(shoppingItems, budgetLimition) {
   return totalPrice;
 }
 
-console.log(shoppingBudget(shoppingItems, budgetLimition));
+console.log(calculatePrice(shoppingItems, budgetLimition));
+
+// 03. You are given an array of numbers. Write a function that takes in this array and another function as inputs. The input function should perform a transformation (double each element etc.) on each element in the array. The main function should then return the transformed array.
+
+const num = [2, 43, 45, 23, 6, 45, 90, 88, 61, 33];
+
+function double(num) {
+  return num * 2;
+}
+
+function transformArray(num, double) {
+  const transformedArray = [];
+
+  for (let i = 0; i < num.length; i++) {
+    transformedArray.push(double(num[i]));
+  }
+  return transformedArray;
+}
+
+console.log(transformArray(num, double));
